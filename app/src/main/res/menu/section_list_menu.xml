@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_notes"
+        android:title="Notes"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_view_notes"
+        />
+
+    <item
+        android:id="@+id/menu_add_item"
+        android:title="Add item"
+        android:icon="@drawable/ic_create_item"
+        app:showAsAction="ifRoom"
+
+        />
+</menu>

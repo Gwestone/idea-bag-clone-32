@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sectionFragment">
+
+    <fragment
+        android:id="@+id/sectionFragment"
+        android:name="com.example.ideabagclone3.SectionList.ui.SectionListFragment"
+        android:label="SectionFragment"
+        tools:layout="@layout/section_list_fragment">
+        <action
+            android:id="@+id/action_sectionFragment_to_readItemFragment"
+            app:destination="@id/readItemFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/readItemFragment"
+        android:name="com.example.ideabagclone3.ReadList.ui.ReadListFragment"
+        android:label="fragment_read_item_list"
+        tools:layout="@layout/fragment_read_item_list" >
+        <argument
+            android:name="section_item_argument"
+            app:argType="com.example.ideabagclone3.data.serializable.SectionSerializable" />
+        <action
+            android:id="@+id/action_readItemFragment_to_readFragment"
+            app:destination="@id/readFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/readFragment"
+        android:name="com.example.ideabagclone3.ReadItem.ReadItemFragment"
+        android:label="read_fragment"
+        tools:layout="@layout/read_fragment" >
+        <argument
+            android:name="Read_item_Serializable"
+            app:argType="com.example.ideabagclone3.data.serializable.ReadItemSerializable" />
+    </fragment>
+</navigation>
